@@ -1,6 +1,4 @@
-# manga-service-client
-
-> My legendary Nuxt.js project
+# service
 
 ## Build Setup
 
