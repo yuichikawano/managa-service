@@ -12,8 +12,8 @@ dotenv.config({ path: `./config/.${stage}.env` })
 dotenv.config({ path: `./config/.env` })
 
 // サイト情報
-const siteTitle = 'nexa'
-const siteDescription = 'Digital karte web client application'
+const siteTitle = 'ようこそ'
+const siteDescription = 'createdByYuichi'
 
 // モジュール
 const modules: NuxtOptionsModule[] = [
