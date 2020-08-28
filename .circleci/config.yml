@@ -1,4 +1,7 @@
 version: 2.1
+orbs:
+  aws-cli: circleci/aws-cli@0.1.4
+  aws-ecs: circleci/aws-ecs@0.0.10
 jobs:
   build:
     docker:
@@ -6,3 +9,7 @@ jobs:
     steps:
       - checkout
       - run: echo "hello world"
+      - run: echo ${AWS_ACCESS_KEY_ID}
+      - run: echo ${AWS_ACCOUNT_ID}
+      - run: echo ${AWS_DEFAULT_REGION}
+      - run: echo ${AWS_DEFAULT_REGION}
