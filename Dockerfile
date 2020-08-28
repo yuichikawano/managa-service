@@ -26,16 +26,20 @@ RUN chown -R 1000:1000 $(npm config get prefix)/share
 
 # uid:1000に
 USER 1000
+WORKDIR /app
+
+# 先にpackage.jsonとyarn.lockをコピーする
+COPY package.json .
+COPY yarn.lock .
+
+RUN yarn install --production=false
 
 # ファイルコピー
-COPY --chown=1000:1000 . /app/
-WORKDIR /app
+COPY --chown=1000:1000 . .
 
 # 不要envを削除
 RUN rm -rf config/.env.me
 
-# インストール & ビルド
-RUN yarn install --production=false
 # インストール & ビルド
 RUN yarn build:dev
 

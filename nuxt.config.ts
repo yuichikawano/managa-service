@@ -75,7 +75,7 @@ const config: NuxtConfig = {
     // Router
     router: {
         base: process.env.ROUTER_BASE,
-        middleware: ['auth'],
+        // middleware: ['auth'],
     },
     // Render
     render: {
