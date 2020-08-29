@@ -16,4 +16,5 @@ workflows:
           aws-region: ${AWS_DEFAULT_REGION}
           family: "kwnych-service"
           cluster-name: "kwnych-cluster"
+          service-name: "kenych-client"
           container-image-name-updates: "container=kwnych-client,tag=latest"
