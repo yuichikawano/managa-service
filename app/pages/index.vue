@@ -6,7 +6,13 @@
     <div>Hello World</div>
     <div>Hello World</div>
     <div>Hello World</div>
-    <div>Circle CI 自動デプロイ</div>
+    <div>Circle CI 自動デプロイできた〜〜〜〜〜〜！！！！！</div>
+    <div>Circle CI 自動デプロイできた〜〜〜〜〜〜！！！！！</div>
+    <div>Circle CI 自動デプロイできた〜〜〜〜〜〜！！！！！</div>
+    <div>Circle CI 自動デプロイできた〜〜〜〜〜〜！！！！！</div>
+    <div>Circle CI 自動デプロイできた〜〜〜〜〜〜！！！！！</div>
+    <div>Circle CI 自動デプロイできた〜〜〜〜〜〜！！！！！</div>
+    <div>Circle CI 自動デプロイできた〜〜〜〜〜〜！！！！！</div>
   </div>
 </template>
 
