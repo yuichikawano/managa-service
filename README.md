@@ -15,6 +15,11 @@ $ yarn start
 
 # generate static project
 $ yarn generate
+
+# user
+name 'yuichi'
+email 'yuichi@notespace.jp'
+pas 'test'
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
