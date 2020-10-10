@@ -48,6 +48,7 @@ export const actions: ActionTree<State, RootState> = {
     },
     async signinUser(context, params) {
         const session = await this.$axios.$post('/auth/signin', params)
+        console.log('session', session)
         // cookie保存
         this.$cookies.set('__cred__', session.credential, {
             path: '/',
