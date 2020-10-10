@@ -7,7 +7,9 @@
     "parserOptions": {
         "parser": "@typescript-eslint/parser",
         "sourceType": "module",
-        "ecmaFeatures": { "legacyDecorators": true }
+        "ecmaFeatures": {
+            "legacyDecorators": true
+        }
     },
     "extends": [
         "@nuxtjs",
@@ -30,7 +32,9 @@
         // 無駄なスペースは削除
         "no-multi-spaces": 2,
         // 不要な改行は削除
-        "no-multiple-empty-lines": [2, { "max": 1 }],
+        "no-multiple-empty-lines": [2, {
+            "max": 1
+        }],
         // 関数とカッコはあけない
         "space-before-function-paren": [0, "never"],
         // true/falseを無駄に使うな
@@ -38,7 +42,7 @@
         // varは禁止
         "no-var": 2,
         // コンソールはwarning
-        "no-console": 1,
+        "no-console": "warn",
         // 配列のindexには空白入れるな(hogehoge[ x ])
         "computed-property-spacing": 2,
         // キー

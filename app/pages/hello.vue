@@ -16,9 +16,7 @@
                     <v-text-field v-model="model.password" label="password" required></v-text-field>
                 </v-col>
                 <v-col>
-                    <v-btn elevation="2" raised @click="loginHandler">
-                        login
-                    </v-btn>
+                    <v-btn elevation="2" raised @click="loginHandler">login</v-btn>
                 </v-col>
             </v-row>
         </v-container>
@@ -38,10 +36,10 @@ export default class PageIndex extends Vue {
         email: '',
     }
 
-    async loginHandler() {
+    loginHandler() {
         console.log('test')
         try {
-            await this.$store.dispatch('user/signinUser', {
+            this.$store.dispatch('user/signinUser', {
                 ...this.model,
             })
         } catch (e) {}

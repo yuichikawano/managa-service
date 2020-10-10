@@ -47,7 +47,14 @@ export const actions: ActionTree<State, RootState> = {
         context.commit('setToken', token)
     },
     async signinUser(context, params) {
+        console.log('tetetet')
         const session = await this.$axios.$post('/auth/signin', params)
+        // .then((res) => {
+        //     console.log('res', res)
+        // })
+        // .catch((e) => {
+        //     console.log(e)
+        // })
         console.log('session', session)
         // cookie保存
         this.$cookies.set('__cred__', session.credential, {

@@ -1,3 +1,4 @@
+import { COrderReservation } from '~/components/order/reservation/COrderReservation.vue'
 import { NuxtConfig } from '@nuxt/types'
 import { NuxtOptionsModule } from '@nuxt/types/config/module'
 import { NuxtOptionsPlugin } from '@nuxt/types/config/plugin'
@@ -10,6 +11,7 @@ process.env.STAGE = stage
 dotenv.config({ path: `./config/.env.me` })
 dotenv.config({ path: `./config/.${stage}.env` })
 dotenv.config({ path: `./config/.env` })
+console.log('process.env.API_URL', process.env.API_URL)
 
 // サイト情報
 const siteTitle = 'ようこそ'
@@ -80,7 +82,14 @@ const config: NuxtConfig = {
     // Axios module configuration
     axios: {
         baseURL: process.env.API_URL,
+        // CORSでのリクエストのため
+        // proxy: true,
     },
+    // proxy: {
+    //     '/api/': {
+    //         target: process.env.API_URL,
+    //     },
+    // },
     // Google analytics configuration
     'google-analytics': {
         id: process.env.GOOGLE_ANALYTICS,
@@ -112,8 +121,8 @@ const config: NuxtConfig = {
     // },
     // Build settings
     build: {
-        extend(config, ctx) {
-            if (ctx.isDev && ctx.isClient) {
+        extend(config, { isDev }) {
+            if (isDev && process.isClient) {
                 if (!config.module) {
                     return
                 }
@@ -125,7 +134,7 @@ const config: NuxtConfig = {
                 })
             }
         },
-        hardSource: true,
+        // hardSource: true,
     },
     buildModules,
 }
