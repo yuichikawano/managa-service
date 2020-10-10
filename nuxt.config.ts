@@ -17,26 +17,20 @@ const siteDescription = 'createdByYuichi'
 
 // モジュール
 const modules: NuxtOptionsModule[] = [
-    // '@nuxtjs/axios',
-    // '@nuxtjs/google-analytics',
-    // '@nuxtjs/style-resources',
-    // ['cookie-universal-nuxt', { alias: 'cookies' }],
-    // 'nuxt-basic-auth-module',
-    // ['@nuxtjs/dotenv', { filename: `../config/.env.me` }],
-    // ['@nuxtjs/dotenv', { filename: `../config/.${stage}.env` }],
-    // ['@nuxtjs/dotenv', { filename: `../config/.env` }],
+    '@nuxtjs/axios',
+    '@nuxtjs/google-analytics',
+    '@nuxtjs/style-resources',
+    ['cookie-universal-nuxt', { alias: 'cookies' }],
+    'nuxt-basic-auth-module',
+    ['@nuxtjs/dotenv', { filename: `../config/.env.me` }],
+    ['@nuxtjs/dotenv', { filename: `../config/.${stage}.env` }],
+    ['@nuxtjs/dotenv', { filename: `../config/.env` }],
 ]
 // build modules
-const buildModules: NuxtOptionsModule[] = ['@nuxt/typescript-build', '@nuxtjs/eslint-module']
+const buildModules: NuxtOptionsModule[] = ['@nuxtjs/vuetify', '@nuxt/typescript-build', '@nuxtjs/eslint-module']
 
 // プラグイン
-const plugins: NuxtOptionsPlugin[] = [
-    // '~/plugins/axios',
-    // '~/plugins/filter',
-    // '~/plugins/dompurify',
-    // '~/plugins/datetime',
-    // '~/plugins/mixins',
-]
+const plugins: NuxtOptionsPlugin[] = ['~/plugins/axios', '~/plugins/filter', '~/plugins/dompurify', '~/plugins/datetime', '~/plugins/mixins']
 
 // basic auth
 const basic = {
@@ -75,7 +69,7 @@ const config: NuxtConfig = {
     // Router
     router: {
         base: process.env.ROUTER_BASE,
-        // middleware: ['auth'],
+        middleware: ['auth'],
     },
     // Render
     render: {
@@ -131,7 +125,7 @@ const config: NuxtConfig = {
                 })
             }
         },
-        // hardSource: true,
+        hardSource: true,
     },
     buildModules,
 }
