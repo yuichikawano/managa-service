@@ -1,6 +1,7 @@
 <template>
     <div>
         PageContentIndex
+        {{ $store.getters['user/user'] }}
         <nuxt-child />
     </div>
 </template>

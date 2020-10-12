@@ -1,8 +1,8 @@
-import { COrderReservation } from '~/components/order/reservation/COrderReservation.vue'
 import { NuxtConfig } from '@nuxt/types'
 import { NuxtOptionsModule } from '@nuxt/types/config/module'
 import { NuxtOptionsPlugin } from '@nuxt/types/config/plugin'
 import dotenv from 'dotenv'
+import { COrderReservation } from '~/components/order/reservation/COrderReservation.vue'
 // const colors = require('vuetify/es5/util/colors').default
 
 // 設定読み込み
@@ -58,7 +58,7 @@ const config: NuxtConfig = {
             { hid: 'description', name: 'description', content: siteDescription },
         ],
         link: [
-            { rel: 'icon', type: 'image/png', href: '/img/favicon.png' },
+            // { rel: 'icon', type: 'image/png', href: '/img/favicon.png' },
             { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' },
             { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700' },
         ],

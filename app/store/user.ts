@@ -47,19 +47,11 @@ export const actions: ActionTree<State, RootState> = {
         context.commit('setToken', token)
     },
     async signinUser(context, params) {
-        console.log('tetetet')
         const session = await this.$axios.$post('/auth/signin', params)
-        // .then((res) => {
-        //     console.log('res', res)
-        // })
-        // .catch((e) => {
-        //     console.log(e)
-        // })
-        console.log('session', session)
         // cookie保存
-        this.$cookies.set('__cred__', session.credential, {
+        this.$cookies.set('__cred__', session.accessToken, {
             path: '/',
-            expires: moment(session.expires).toDate(),
+            expires: moment(session.expire).toDate(),
         })
         context.commit('setUser', session.user)
         return session
@@ -67,7 +59,7 @@ export const actions: ActionTree<State, RootState> = {
     setSession(context, session) {
         // cookie保存
         // @ts-ignore
-        this.$cookies.set('__cred__', session.credential, {
+        this.$cookies.set('__cred__', session.accessToken, {
             path: '/',
             expires: moment(session.expires).toDate(),
         })
@@ -85,7 +77,7 @@ export const actions: ActionTree<State, RootState> = {
     async signoutUser(context) {
         try {
             // @ts-ignore
-            await this.$axios.$post('/user/signout')
+            await this.$axios.$get('/auth/signout')
             // cookie保存
             // @ts-ignore
             this.$cookies.remove('__cred__', {

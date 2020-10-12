@@ -1,7 +1,5 @@
 export default ({ app, $axios }) => {
     $axios.onRequest((config) => {
-        console.log('process.', process)
-        console.log('config.', config)
         if (process.server) {
             config.headers.common = {
                 Accept: 'application/json',

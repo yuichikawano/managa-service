@@ -36,13 +36,15 @@ export default class PageIndex extends Vue {
         email: '',
     }
 
-    loginHandler() {
-        console.log('test')
+    async loginHandler() {
         try {
-            this.$store.dispatch('user/signinUser', {
+            await this.$store.dispatch('user/signinUser', {
                 ...this.model,
             })
-        } catch (e) {}
+            this.$router.push('/content')
+        } catch (e) {
+            console.log('e', e)
+        }
     }
 }
 </script>
