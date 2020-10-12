@@ -1,7 +1,6 @@
 import { Context } from '@nuxt/types'
 
 export default async function ({ app, store, $axios, route, redirect }: Context) {
-    console.log('auth!!!!!!!!!!!!!!!')
     // サーバ処理時以外は無視
     if (!process.server) {
         return

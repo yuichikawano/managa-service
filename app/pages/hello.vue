@@ -43,6 +43,7 @@ export default class PageIndex extends Vue {
             })
             this.$router.push('/content')
         } catch (e) {
+            // eslint-disable-next-line no-console
             console.log('e', e)
         }
     }

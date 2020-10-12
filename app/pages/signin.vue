@@ -49,7 +49,7 @@ export default class PageSignin extends Vue {
     }
 
     async signupHandler() {
-        const res = await this.$axios.$post('/user/signup', this.model)
+        await this.$axios.$post('/user/signup', this.model)
     }
 }
 </script>
