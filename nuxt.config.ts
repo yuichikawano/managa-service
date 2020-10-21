@@ -2,7 +2,6 @@ import { NuxtConfig } from '@nuxt/types'
 import { NuxtOptionsModule } from '@nuxt/types/config/module'
 import { NuxtOptionsPlugin } from '@nuxt/types/config/plugin'
 import dotenv from 'dotenv'
-import { COrderReservation } from '~/components/order/reservation/COrderReservation.vue'
 // const colors = require('vuetify/es5/util/colors').default
 
 // 設定読み込み
@@ -128,7 +127,7 @@ const config: NuxtConfig = {
                 }
                 config.module.rules.push({
                     enforce: 'pre',
-                    test: /\.(js|vue)$/,
+                    test: /\.(js|vue|ts)$/,
                     loader: 'eslint-loader',
                     exclude: /(node_modules)/,
                 })

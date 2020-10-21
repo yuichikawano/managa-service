@@ -7,6 +7,7 @@
     "scripts": {
         "dev": "cross-env HOST=0.0.0.0 NODE_ENV=development STAGE=local nuxt-ts -o",
         "build": "nuxt-ts build",
+        "build:api": "rimraf app/apis && cross-env STAGE=local openapi2aspida --build",
         "build:dev": "cross-env STAGE=dev nuxt-ts build",
         "build:stage": "cross-env STAGE=stage nuxt-ts build",
         "build:prod": "cross-env STAGE=prod nuxt-ts build",
@@ -20,6 +21,7 @@
         "test": "jest"
     },
     "dependencies": {
+        "@aspida/axios": "0.11.2",
         "@bitjourney/uuid-v4": "^1.0.1",
         "@nuxt/typescript-build": "2.0.0",
         "@nuxt/typescript-runtime": "1.0.0",
@@ -37,6 +39,8 @@
         "jsbarcode": "^3.11.0",
         "konva": "^4.0.17",
         "lodash": "^4.17.15",
+        "nuxt-typed-vuex": "^0.1.22",
+        "openapi2aspida": "^0.11.0",
         "luxon": "^1.24.1",
         "marked": "^0.7.0",
         "moment": "^2.27.0",

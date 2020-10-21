@@ -22,7 +22,6 @@
                             <v-btn v-else elevation="2" @click="logoutHandler">logout</v-btn>
                         </v-list-item-content>
                     </v-list-item>
-
                     <v-divider></v-divider>
 
                     <v-list dense nav>

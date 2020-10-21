@@ -27,6 +27,7 @@ export default async function ({ app, store, $axios, route, redirect }: Context)
         try {
             // ユーザデータ取得
             const user = await $axios.$get('/user/me')
+            console.log('auth', user)
             await store.dispatch('user/setUser', user)
         } catch (e) {
             if (e.response != null) {

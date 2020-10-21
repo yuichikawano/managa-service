@@ -12,6 +12,7 @@
                 <v-col cols="12" md="4">
                     <v-text-field v-model="model.email" label="E-mail" required></v-text-field>
                 </v-col>
+
                 <v-col cols="12" md="4">
                     <v-text-field v-model="model.password" label="password" required></v-text-field>
                 </v-col>
